@@ -1,0 +1,141 @@
+:root {
+      --azul: #3A66FF;
+      --petroleo: #1C1C1E;
+      --lilas: #8231ce;
+      --branco: #FFFFFF;
+    }
+    @font-face {
+    font-family: 'Bludhaven';
+    src: url('../fonts/BLUDHAVEN.ttf') format('truetype');
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    html, body {
+     height: 100%;
+    }
+
+    html {
+        background: linear-gradient(135deg, var(--azul), var(--lilas));
+    }
+    .interface {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    }
+
+    section {
+        height: 100vh;
+        scroll-snap-align: start; /* <- aqui estava faltando */
+        scroll-snap-align: end;
+    }
+    .convite{
+        height: 100vh;
+        color: var(--branco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background: transparent;
+    }
+
+   .convite header {
+  position: relative;
+  padding: 40px 20px 20px;
+}
+
+.convite header h1 {
+  font-family: 'BLUDHAVEN', sans-serif;
+  font-size: 5.5em;
+}
+
+.convite #estilo-1 {
+  color: #FFFFFF;
+  position: absolute;
+  width: 45%;
+  height: auto;
+  top: 71%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
+.convite .info {
+  font-family: 'Poppins', sans-serif;
+  background: var(--petroleo);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.convite .info h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--lilas);
+  margin-bottom: 10px;
+}
+
+.convite form {
+  font-family: 'Poppins', sans-serif;
+  background: var(--branco);
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.convite form input,
+.convite form select,
+.convite form button {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+}
+
+.convite form button {
+  font-family: 'Poppins', sans-serif;
+  background: var(--lilas);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.convite form button:hover {
+  background: #5f2497;
+}
+
+.convite footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+}
+.introduçao{
+    height: 100vh;
+    background-color: #1C1C1E;
+    
+}
+
+
+@media (max-width: 600px) {
+  .convite header h1 {
+    font-size: 3em;
+  }
+
+  .convite .info,
+  .convite form {
+    width: 90%;
+  }
+
+  .convite #estilo-1 {
+    width: 40%;
+    top: 30%;
+  }
+}
