@@ -19,6 +19,7 @@
     }
 
     html {
+        position: relative;
         background: linear-gradient(135deg, var(--azul), var(--lilas));
     }
     .interface {
@@ -99,6 +100,7 @@
   font-size: 1em;
   border-radius: 5px;
   border: none;
+  background-color: #0944e558;
 }
 
 .convite form button {
@@ -117,25 +119,107 @@
   margin-top: 50px;
   font-size: 0.9em;
 }
-.introduçao{
-    height: 100vh;
-    background-color: #1C1C1E;
-    
+.convite #caio{
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: -28.5%;
+    left: -32%;
+    transform: translate(-50%,-50%);
 }
+.convite #bianca{
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: -91.5%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+
+}
+/* .introduçao {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.introduçao .slide {
+  height: 100vh;
+  background: url('sua-imagem.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.introduçao .text {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+  font-size: 2em;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4); /* opcional, 
+  border-radius: 10px;
+}
+.introduçao #irmoes{
+    height: auto;
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translate(-50%,-50%);
+} */
 
 
 @media (max-width: 600px) {
+  .convite #caio {
+    width: 0%;
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .convite #bianca {
+    width: 0%;
+    position: absolute;
+    top: 75%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
   .convite header h1 {
-    font-size: 3em;
+    font-size: 5.2em;
+    text-align: center;
+    
   }
 
   .convite .info,
   .convite form {
-    width: 90%;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .convite form input,
+  .convite form select,
+  .convite form button {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .convite footer {
+    font-size: 0.85em;
+    margin-top: 30px;
   }
 
   .convite #estilo-1 {
-    width: 40%;
-    top: 30%;
+    width: 80%;
+    top: 81%;
+    left: 50%;
   }
 }
