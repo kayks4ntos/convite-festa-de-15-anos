@@ -256,4 +256,22 @@
   width: 90% ;
   height: auto;
 }
+.perfil {
+  background: rgb(255, 255, 255);
+  border: 2px solid #ffffff55;
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s;
+  color: #1C1C1E;
+}
+ 
+.perfil img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #00000066;
+}
  }

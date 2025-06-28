@@ -11,11 +11,31 @@
 </head>
 <body>
     <div class="interface">
+       
+      <section class="apresentacao">
+        
+  <h1>🎉 Caio & Bianca fazem 15 anos! 🎉</h1>
+  <p class="subtitulo">Uma data especial, duas histórias incríveis. Vamos comemorar juntos!</p>
+ 
+  <div class="perfil-container">
+    <div class="perfil ">
+      <img src="/img/WhatsApp Image 2025-06-22 at 15.01.28.jpeg" alt="Foto do Caio">
+      <h2>Caio</h2>
+      <p>⚽ Ama futebol, jiu-jitsu e videogame!</p>
+    </div>
+
+    <div class="perfil">
+      <img src="/img/WhatsApp Image 2025-06-22 at 15.01.37.jpeg" alt="Foto da Bianca">
+      <h2>Bianca</h2>
+      <p>💃 Ama dançar, moda e música!</p>
+    </div>
+  </div>
+</section>
     <section class="convite">
-  <header>
+  <header id="cabeçalho">
     <h1>Convite Especial</h1>
     <img id="estilo-1" src="/img/pngtree-wedding-invitation-ornament-png-image_6479355.png" alt="imagem">
-    <p><br><br>Venha celebrar os 15 anos de <strong>Caio</strong> e <strong>Bianca</strong>!</p>
+    <p>Venha celebrar os 15 anos de <strong>Caio</strong> e <strong>Bianca</strong>!</p>
   </header>
 
   <section class="info">
@@ -40,23 +60,16 @@
     <footer>
     <p>Com amor, Caio & bianca ❤️</p>
     </footer>
-    <img id="caio" src="/img/ChatGPT Image Jun 22, 2025, 07_24_45 PM.png" alt="caio">
-    <img id="bianca" src="/img/ChatGPT Image Jun 22, 2025, 08_28_41 PM-Photoroom.png" alt="bianca">
-  </section>
-  <!-- <section class="introduçao">
+    <div id="fundo">
+      <img id="caio" src="/img/ChatGPT Image Jun 22, 2025, 07_24_45 PM.png" alt="caio">
+      <img id="bianca" src="/img/ChatGPT Image Jun 22, 2025, 08_28_41 PM-Photoroom.png" alt="bianca">
+   </div>
     
-    <img class="slide" src="/img/wave-haikei.svg" alt="slide">
-    <img id="irmoes"  src="/img/WhatsApp Image 2025-06-22 at 15.08.20.jpeg" alt="irmoes">
-    <div class="text">
-    <h1>caio e bianca</h1>
-    </div>
-</section> -->
-
+  </section>
   </div>
+  
 
   <script>
-    let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
     const form = document.getElementById('rsvp-form');
     form.addEventListener('submit', e => {
       e.preventDefault();
