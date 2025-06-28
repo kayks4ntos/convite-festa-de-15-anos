@@ -14,59 +14,80 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
     }
-    html, body {
-     height: 100%;
-    }
+    body {
+      background: linear-gradient(135deg, var(--azul), var(--lilas));
 
-    html {
-        position: relative;
-        background: linear-gradient(135deg, var(--azul), var(--lilas));
     }
     .interface {
-    height: 100vh;
+    height: 100%;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .intro{
+      width: 100%;
+      height: 100vh;
     }
 
     section {
-        height: 100vh;
+        height: 100%;
         scroll-snap-align: start; /* <- aqui estava faltando */
         scroll-snap-align: end;
     }
     .convite{
-        height: 100vh;
+        width: 100%;
+        height: auto;
         color: var(--branco);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 20px;
-        background: transparent;
+        background: rgba(255, 255, 255, 0.103);
+        border-radius: 2%;
+        gap: 0%;
     }
 
    .convite header {
-  position: relative;
-  padding: 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20%;
+    padding: 40px 20px 20px;
+    justify-content: center;
 }
+
 
 .convite header h1 {
   font-family: 'BLUDHAVEN', sans-serif;
   font-size: 5.5em;
+  flex-grow: 1;
+  
+}
+#cabeçalho{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
 }
 
 .convite #estilo-1 {
   color: #FFFFFF;
-  position: absolute;
-  width: 45%;
+  width: 50% ;
   height: auto;
-  top: 71%;
-  left: 49%;
-  transform: translate(-50%, -50%);
 }
+#cabeçalho p{
+  width: auto;
+  height: 20px;
+    
+}
+
 
 .convite .info {
   font-family: 'Poppins', sans-serif;
-  background: var(--petroleo);
+  background: rgba(0, 0, 0, 0.349);
   padding: 20px;
   border-radius: 15px;
   max-width: 600px;
@@ -76,7 +97,7 @@
 
 .convite .info h2 {
   font-family: 'Poppins', sans-serif;
-  color: var(--lilas);
+  color: #8583ff;
   margin-bottom: 10px;
 }
 
@@ -116,24 +137,21 @@
 }
 
 .convite footer {
-  margin-top: 50px;
+  display: flex;
+  background-color: #5f249791;
+  margin-top: px;
   font-size: 0.9em;
 }
 .convite #caio{
     width: 20%;
     height: auto;
-    position: relative;
-    top: -28.5%;
-    left: -32%;
-    transform: translate(-50%,-50%);
+    display: flex;
+    
 }
 .convite #bianca{
     width: 20%;
     height: auto;
-    position: relative;
-    top: -91.5%;
-    left: 49%;
-    transform: translate(-50%,-50%);
+    display: flex;
 
 }
 /* .introduçao {
@@ -174,52 +192,15 @@
 
 
 @media (max-width: 600px) {
-  .convite #caio {
-    width: 0%;
-    position: absolute;
-    top: 75%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
-
-  .convite #bianca {
-    width: 0%;
-    position: absolute;
-    top: 75%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    display: none;
-  }
 
   .convite header h1 {
     font-size: 5.2em;
     text-align: center;
     
-  }
-
-  .convite .info,
-  .convite form {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-  }
-
-  .convite form input,
-  .convite form select,
-  .convite form button {
-    font-size: 1em;
-    padding: 10px;
-  }
-
-  .convite footer {
-    font-size: 0.85em;
-    margin-top: 30px;
-  }
-
+  } 
   .convite #estilo-1 {
-    width: 80%;
-    top: 81%;
-    left: 50%;
-  }
+  color: #FFFFFF;
+  width: 90% ;
+  height: auto;
 }
+ }
