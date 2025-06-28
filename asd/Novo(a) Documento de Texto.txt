@@ -1,0 +1,206 @@
+:root {
+      --azul: #3A66FF;
+      --petroleo: #1C1C1E;
+      --lilas: #8231ce;
+      --branco: #FFFFFF;
+    }
+    @font-face {
+    font-family: 'Bludhaven';
+    src: url('../fonts/BLUDHAVEN.ttf') format('truetype');
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, var(--azul), var(--lilas));
+
+    }
+    .interface {
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .intro{
+      width: 100%;
+      height: 100vh;
+    }
+
+    section {
+        height: 100%;
+        scroll-snap-align: start; /* <- aqui estava faltando */
+        scroll-snap-align: end;
+    }
+    .convite{
+        width: 100%;
+        height: auto;
+        color: var(--branco);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.103);
+        border-radius: 2%;
+        gap: 0%;
+    }
+
+   .convite header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20%;
+    padding: 40px 20px 20px;
+    justify-content: center;
+}
+
+
+.convite header h1 {
+  font-family: 'BLUDHAVEN', sans-serif;
+  font-size: 5.5em;
+  flex-grow: 1;
+  
+}
+#cabeçalho{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.convite #estilo-1 {
+  color: #FFFFFF;
+  width: 50% ;
+  height: auto;
+}
+#cabeçalho p{
+  width: auto;
+  height: 20px;
+    
+}
+
+
+.convite .info {
+  font-family: 'Poppins', sans-serif;
+  background: rgba(0, 0, 0, 0.349);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.convite .info h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #8583ff;
+  margin-bottom: 10px;
+}
+
+.convite form {
+  font-family: 'Poppins', sans-serif;
+  background: var(--branco);
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.convite form input,
+.convite form select,
+.convite form button {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  background-color: #0944e558;
+}
+
+.convite form button {
+  font-family: 'Poppins', sans-serif;
+  background: var(--lilas);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.convite form button:hover {
+  background: #5f2497;
+}
+
+.convite footer {
+  display: flex;
+  background-color: #5f249791;
+  margin-top: px;
+  font-size: 0.9em;
+}
+.convite #caio{
+    width: 20%;
+    height: auto;
+    display: flex;
+    
+}
+.convite #bianca{
+    width: 20%;
+    height: auto;
+    display: flex;
+
+}
+/* .introduçao {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.introduçao .slide {
+  height: 100vh;
+  background: url('sua-imagem.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.introduçao .text {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+  font-size: 2em;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4); /* opcional, 
+  border-radius: 10px;
+}
+.introduçao #irmoes{
+    height: auto;
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translate(-50%,-50%);
+} */
+
+
+@media (max-width: 600px) {
+
+  .convite header h1 {
+    font-size: 5.2em;
+    text-align: center;
+    
+  } 
+  .convite #estilo-1 {
+  color: #FFFFFF;
+  width: 90% ;
+  height: auto;
+}
+ }
