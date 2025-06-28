@@ -8,6 +8,10 @@
     font-family: 'Bludhaven';
     src: url('../fonts/BLUDHAVEN.ttf') format('truetype');
 }
+    @font-face {
+      font-family: 'Sunshine Festival';
+      src: url(/fonts/Rundkursiv.ttf);
+    }
     * {
       margin: 0;
       padding: 0;
@@ -19,17 +23,79 @@
 
     }
     .interface {
-    height: 100%;
+    height: auto;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     }
-    .intro{
-      width: 100%;
-      height: 100vh;
-    }
+    .apresentacao {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, var(--azul), var(--lilas));
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+}
+
+.apresentacao h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  font-family: 'Sunshine Festival';
+}
+
+.subtitulo {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  
+
+}
+
+
+.perfil {
+  background: rgb(255, 255, 255);
+  border: 2px solid #ffffff55;
+  border-radius: 20px;
+  padding: 20px;
+  width: 500px;
+  height: 800px;
+  transition: transform 0.3s;
+  color: #1C1C1E;
+}
+
+.perfil:hover {
+  transform: scale(1.05);
+}
+
+.perfil img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px #00000066;
+}
+
+.perfil h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.perfil p {
+  font-size: 1em;
+  color: #000000;
+}
+
 
     section {
         height: 100%;
@@ -154,44 +220,31 @@
     display: flex;
 
 }
-/* .introduçao {
-  overflow: hidden;
-  height: 100vh;
-  position: relative;
+#fundo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+ }
+#fundo #caio{
+  width: 100px;
+  height: auto;
 }
-
-.introduçao .slide {
-  height: 100vh;
-  background: url('sua-imagem.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
+#fundo #bianca{
+  width: 100px;
+  height: auto;
 }
-
-.introduçao .text {
-  position: absolute;
-  top: 25%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-  color: white;
-  z-index: 2;
-  text-align: center;
-  font-size: 2em;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.4); /* opcional, 
-  border-radius: 10px;
-}
-.introduçao #irmoes{
-    height: auto;
-    width: 40vw;
-    position: absolute;
-    top: 50%;
-    right: -20%;
-    transform: translate(-50%,-50%);
-} */
+ 
 
 
 @media (max-width: 600px) {
+  .apresentacao {
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  height: auto;
+}
 
   .convite header h1 {
     font-size: 5.2em;
