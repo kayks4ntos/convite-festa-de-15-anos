@@ -40,9 +40,18 @@
 
   <section class="info">
     <h2>Detalhes da Festa</h2>
-    <p><strong>Data:</strong> 20 de Setembro de 2025</p>
-    <p><strong>Hora:</strong> 19h</p>
-    <p><strong>Local:</strong> Espaço Festas, São João Del Rei - MG</p>
+    <p><strong>Data:</strong> 9 de agosto de 2025</p>
+    <p><strong>Hora:</strong> 20:30h</p>
+    <p><strong>Local:</strong> , São João Del Rei - MG</p>
+    <div class="contador">
+    <h1>Faltam:</h1>
+    <div id="timer">
+      <span id="dias">00</span>d
+      <span id="horas">00</span>h
+      <span id="minutos">00</span>m
+      <span id="segundos">00</span>s
+    </div>
+  </div>
   </section>
 
   <form id="rsvp-form">
@@ -70,6 +79,29 @@
   
 
   <script>
+    const dataFinal = new Date("2025-08-09T20:30:00").getTime();
+
+function atualizarContador() {
+  const agora = new Date().getTime();
+  const tempoRestante = dataFinal - agora;
+
+  if (tempoRestante < 0) {
+    document.getElementById("timer").innerHTML = "Tempo esgotado!";
+    return;
+  }
+
+  const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000);
+
+  document.getElementById("dias").textContent = String(dias).padStart(2, '0');
+  document.getElementById("horas").textContent = String(horas).padStart(2, '0');
+  document.getElementById("minutos").textContent = String(minutos).padStart(2, '0');
+  document.getElementById("segundos").textContent = String(segundos).padStart(2, '0');
+}
+
+setInterval(atualizarContador, 1000);
     const form = document.getElementById('rsvp-form');
     form.addEventListener('submit', e => {
       e.preventDefault();
