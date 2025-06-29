@@ -39,10 +39,13 @@
   </header>
 
   <section class="info">
-    <h2>Detalhes da Festa</h2>
-    <p><strong>Data:</strong> 9 de agosto de 2025</p>
-    <p><strong>Hora:</strong> 20:30h</p>
-    <p><strong>Local:</strong> , São João Del Rei - MG</p>
+   <p><strong>📅 Data:</strong> 9 de agosto de 2025</p>
+<p><strong>🕗 Hora:</strong> 20:30h</p>
+<p><strong>📍 Local:</strong> Sítio Recanto da Aline, São João Del Rei - MG</p>
+<p><strong>📌 Referência:</strong> BR-265, número 815.</p>
+<p>
+  <em>Passando o Barramas Mix, na rodovia sentido Tiradentes, entre à esquerda após 300 metros — Sítio Recanto da Aline.</em>
+</p>
     <div class="contador">
     <h1>Faltam:</h1>
     <div id="timer">
@@ -57,7 +60,8 @@
   <form id="rsvp-form">
     <h2>Confirme sua presença</h2>
     <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <input type="tel" name="telefone" placeholder="Seu telefone (com DDD)" required pattern="\d{10,11}">
+
     <select name="presenca" required>
       <option value="">Vai comparecer?</option>
       <option value="Sim">Sim</option>
@@ -110,9 +114,10 @@ setInterval(atualizarContador, 1000);
         body: new FormData(form)
       })
       .then(() => {
-        document.getElementById('msg').innerText = 'Presença confirmada com sucesso!';
-        form.reset();
-      })
+          alert('Presença confirmada com sucesso!');
+          form.reset();
+          document.getElementById('msg').innerText = '';
+        })
       .catch(() => {
         document.getElementById('msg').innerText = 'Erro ao enviar confirmação.';
       });
